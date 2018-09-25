@@ -1,0 +1,172 @@
+/* 
+Just making note of these dope colors (HSL):
+187, 90, 82 Light Blue
+187, 60, 22 Like a really deep teal
+154, 100, 62 Muted emerald
+
+0, 0, 33 And the dark gray of course
+*/
+
+:root {
+     font-size: 22px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: 200;
+     color: rgb(252,255,245);
+}
+
+h1   { font: 400 2.0rem/1.2 …; }
+h2   { font: italic 300 1.5rem/1.2 …; }
+h3   { font: 400 1.0rem/1.2 …; }
+a    { box-shadow: inset 0 -0.25em #3DFFAB;  }
+a:hover { color: #3DFFAB; }
+
+p    {
+     color: hsl(0, 0%, 33%);
+     /* text-align: justify; */
+     padding-bottom: 1.25rem;
+     /* text-indent: 2rem; */
+
+     font: 200 1.0rem/1.5 …;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3 {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     color: hsl(000, 000%, 33%);
+}
+
+h2, h3 {
+     padding-bottom: 0.5rem;
+}
+
+.back-wrapper, .front-wrapper {
+     display: grid;
+     grid-template-rows: 100vh repeat(4, auto);
+     width: 100%;
+     /* grid-column-gap: 2em; */
+}
+
+.back-wrapper {
+     position: fixed;
+     width: 100%;
+     z-index: -1;
+}
+
+.back-wrapper header {
+     position: relative;
+     background-color: rgb(252,255,245);
+     background-image: url("../image.jpeg");
+     background-size: cover;
+     text-indent: 2rem;
+}
+
+.back-wrapper header * {
+     margin-top: 2rem;
+}
+
+.front-wrapper .services {
+     grid-area: services;
+     background-color: rgb(209,219,189);
+     padding-top: 3rem;
+     text-align: center;
+     padding-bottom: 3rem;
+}
+
+.front-wrapper .services #services-list {
+     display: flex;
+     flex-direction: row;
+}
+
+.front-wrapper .services #services-list h3 {
+     flex: 1;
+     padding-top: 1rem;
+}
+
+.front-wrapper .about {
+     grid-area: about;
+     background-color: rgb(145,170,157);
+     height: auto;
+     padding-top: 3rem;
+     padding-bottom: 3rem;
+}
+
+.front-wrapper .about h2 {
+     text-align: center;
+     color: rgb(252,255,245);
+}
+
+.front-wrapper .about p {
+     width: 75%;
+     margin: auto;
+     color: rgb(252,255,245);
+}
+
+.front-wrapper .contact {
+     grid-area: contact;
+     text-align: center;
+     background-color: rgb(62,96,112);
+     padding-top: 3rem;
+     padding-bottom: 3rem;
+}
+
+.front-wrapper .contact h2 {
+     color: rgb(252,255,245);
+}
+
+.front-wrapper .contact form {
+     display: flex;
+     flex-direction: column;
+     margin-left: auto;
+     margin-right:auto;
+     width: 50%;
+}
+
+.front-wrapper .contact form #email-address-label {
+     color: rgb(252,255,245);
+     text-align: left;
+}
+
+.front-wrapper .contact form #email-address {
+     margin-top: 0.5rem;
+     margin-bottom: 0.5rem;
+     color: black;
+     font: 200 0.75rem/1.2 …;
+}
+
+.front-wrapper .contact form #email-content-label {
+     color: rgb(252,255,245);
+     text-align: left;
+}
+
+.front-wrapper .contact form #email-content {
+     margin-top: 0.5rem;
+     height: 10rem;
+     color: black;
+     font: 200 0.75rem/1.2 …;
+}
+
+.front-wrapper footer {
+     grid-area: footer;
+     background-color: rgb(25,52,65);
+}
+
+.front-wrapper footer #copyright {
+     white-space: nowrap;
+     font: 200 0.7rem/1.2 …;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     color: rgb(252,255,245);
+     text-align: center;
+     padding-top: 4rem;
+     padding-bottom: 4rem;
+}
+
+.front-wrapper {
+     position: absolute;
+     top: 0px;
+     grid-template-areas: 
+          "."
+          "services"
+          "about"
+          "contact"
+          "footer"
+}
